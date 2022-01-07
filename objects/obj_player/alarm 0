@@ -1,0 +1,6 @@
+/// @description hit timer
+/* while timer is running, player cannot do anything
+timer starts whenever the player gets hit 
+when timer ends, player starts idle animation && can move again */
+
+sprite_index = idle_animation;
