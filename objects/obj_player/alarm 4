@@ -1,0 +1,7 @@
+/// @description charge attack release timer
+
+state = player_state_free;
+charge_attack_damage = 0;
+charge_attack.frames = 0;
+releasing_charge_attack = false;
+mask_index = idle_animation;
