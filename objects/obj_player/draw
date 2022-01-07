@@ -1,0 +1,35 @@
+/// @description create flash effect when hit
+draw_self();
+
+if state == player_state_charge_attack && red.amount > 0 
+{
+	shader_set(sh_addRed);
+	shader_set_uniform_f(red.handle, red.amount);
+	draw_self();
+	shader_reset();
+}
+
+flash(0.05);
+
+if debug_mode
+{
+	y_top_variable = 85;
+	variable_count = 0;
+	
+	//draw_variable("character");
+	//draw_variable("x_velocity");
+	//draw_variable("y_velocity");
+	//draw_variable("past_x_direction");
+	//draw_variable("past_y_direction");
+	//draw_variable("attack_index");
+	//string_state = "fuck you";f
+	//if state == player_state_free  string_state = "free";
+	//else if state == player_state_dash  string_state = "dash";
+	//else if state == player_state_attack_combo  string_state = "attack combo";
+	//draw_variable("string_state");
+	floor_image_index = floor(image_index);
+	more_than_length = floor_image_index > dash.length_;
+	draw_text(x, y - 80, "mask_index: " + sprite_get_name(mask_index));
+	//if global.character == Character.JULLUS  draw_variable("charge_attack.damage");
+}
+
