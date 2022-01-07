@@ -1,0 +1,3 @@
+/// @description make grass move
+
+other.image_speed = 10;
