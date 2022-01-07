@@ -1,0 +1,4 @@
+/// @description combo delay timer
+
+state = player_state_free;
+attack_index = 0;
